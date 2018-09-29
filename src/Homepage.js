@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Container, Header, Divider } from 'semantic-ui-react'
+import NewsView from './modules/News/NewsView';
 
 export default class HomePage extends React.Component {
     render() {
@@ -42,6 +43,8 @@ export default class HomePage extends React.Component {
                         Curabitur ullamcorper ultricies nisi.
                     </p>
                 </Container>
+
+                <NewsView />
             </div>
         )
     }

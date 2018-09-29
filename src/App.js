@@ -1,9 +1,13 @@
 // Node modules
-import * as React from 'react';
-import 'semantic-ui-css/semantic.min.css';
 
-// Import react components
+// import libraries
+import * as React from 'react';
 import { } from 'semantic-ui-react'
+
+// import custom components
+import AppFooter from './modules/Layout/AppFooter';
+import AppHeader from './modules/Layout/AppHeader';
+import AppRouter from './modules/Router/AppRouter';
 
 export default class App extends React.Component {
     /* https://medium.com/@bryantheastronaut/ok-here-we-go-b9f683c5a00c */
@@ -12,9 +16,16 @@ export default class App extends React.Component {
 
 
         return (
-            <div className="App">
+            <div className="App main-color">
+
+                {/* Header for web app */}
+                <AppHeader />
                 
-                <header> Swag </header>
+                {/* Navigation bar  and routing for web app */}
+                <AppRouter />
+
+                {/* Footer for web app */}
+                <AppFooter />
    
             </div>
         );
