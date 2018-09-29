@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grid, Container, Divider, Header } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 
 export default class AppFooter extends React.Component {
 
@@ -31,7 +31,7 @@ export default class AppFooter extends React.Component {
                     {clickers.map((click, index) => {
                         return <a key={index} href={click.href}> <i className={click.icon}></i></a>
                     })}
-                    
+
                 </Container>
             </div>
         )

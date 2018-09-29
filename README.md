@@ -4,7 +4,7 @@ Website for me to display products that I have purchased in bulk to offer to fam
 ## Getting Started
 
 ### Clone
-Clone this repo to your local machine using https://github.com/minhhho2/online-shopping.git
+Clone this repo to your local machine using https://github.com/minhhho2/ecommerce.git
 
 ### Setup
 > Install npm packages
@@ -13,6 +13,9 @@ $ npm install
 ```
 
 ## Features
-
-
-## 3rd Party API
+- Products 
+    - Page for viewing available products
+- News
+    - Page for viewing the latest news
+- Poll/Thread (TODO)
+    - Page for voting on the next product the website will offer

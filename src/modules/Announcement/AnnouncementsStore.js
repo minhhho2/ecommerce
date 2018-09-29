@@ -6,7 +6,7 @@ class AnnouncementsStore {
     @observable announcements = [];
     
     @action
-    setup = (size) => {
+    setup = () => {
         this.announcements = MockAnnouncements.slice();
     }
 
