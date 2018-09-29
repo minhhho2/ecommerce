@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { Container, Header, Divider } from 'semantic-ui-react';
+import { Container, Header, Divider, Segment } from 'semantic-ui-react';
 
 import AnnouncementsView from '../Announcement/AnnouncementsView';
 
@@ -9,6 +9,16 @@ import AnnouncementsView from '../Announcement/AnnouncementsView';
 export default class Home extends React.Component {
 
     render() {
+
+        const imgUrl = 'https://images.unsplash.com/photo-1493952113579-dfa2cfd5398b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=672627cf88d91039c782e362f99332d0&auto=format&fit=crop&w=1350&q=80';
+
+        const styles = {
+            introContainer: {
+                backgroundImage: `url(${imgUrl})`,
+                backgroundRepeat: `no-repeat`,
+                backgroundSize: `auto`
+            }
+        };
         return (
             <div>
 

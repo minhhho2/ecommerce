@@ -52,12 +52,6 @@ export default class AppRouter extends React.Component {
                                     onClick={AppRouterStore.handleTabClick}
                                     as={Link} to='/announcements'
                                 />
-
-                                {/* 
-                                    <MainMenu />
-                                    <SecondaryMenu />
-                                */}
-
                             </Menu>
 
                         {/* Switch Component that holds Routes */}
@@ -67,8 +61,6 @@ export default class AppRouter extends React.Component {
                             <Route exact path='/products' component={ProductsView} />
                             <Route exact path="/products/:id" component={ProductView} />
                             <Route exact path='/announcements' component={AnnouncementsView} />
-
-
                             <Route component={ErrorView} />
                         </Switch>
                         <br />
