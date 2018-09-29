@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 
-import { Header, Divider } from 'semantic-ui-react';
+import { Divider } from 'semantic-ui-react';
 
 @observer
 export default class Error extends React.Component {
@@ -10,16 +10,14 @@ export default class Error extends React.Component {
     render() {
         return (
 
-            <div>
-                <Header as='h1'>Error Page</Header>
-                <br />
+            <div className='text-center'>
+                <div style={{ fontSize: '150px' }}>
+                    <p><strong>4<span style={{ color: 'red' }}>0</span>4</strong></p>
+                </div>
                 <Divider />
-                <Header as='h1'>Error Page</Header>
-                <br />
-                <Divider />
-                <Header as='h1'>Error Page</Header>
-                <br />
-                <Divider />
+                <div style={{ fontSize: '50px' }}>
+                    <p>Oops! The page you requested could not be found...</p>
+                </div>
             </div>
 
         );

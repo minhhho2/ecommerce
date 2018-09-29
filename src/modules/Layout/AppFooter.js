@@ -22,9 +22,7 @@ export default class AppFooter extends React.Component {
         ];
 
         return (
-            <div className='text-center'>=
-
-                <Divider className='bg-white m-3' />
+            <div className='text-center'>
 
                 {/*  T&A footer content */}
                 <Container className='p-5'>
