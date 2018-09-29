@@ -21,9 +21,11 @@ export default class AppRouter extends React.Component {
     /* Set up initial states */
     componentDidMount() { AppRouterStore.setup(); }
 
+    handleContextRef = contextRef => AppRouterStore.contextRef = contextRef;
+    
     render() {
 
-        const { activeTab } = AppRouterStore;
+        const { activeTab, contextRef } = AppRouterStore;
 
         return (
             <div>
@@ -31,34 +33,36 @@ export default class AppRouter extends React.Component {
                 {/* Router for containing UI links and Url Routes */}
                 <BrowserRouter>
 
-                    <div>
+                    <div ref={this.handleContextRef}>
+                        <Sticky context={contextRef} pushing>
 
-                        {/* semantic UI components for linking to url paths */}
-                        <Menu size='massive'>
-                            <Menu.Item
-                                name='home' active={activeTab === 'home'}
-                                onClick={AppRouterStore.handleTabClick}
-                                as={Link} to='/'
-                            />
+                            {/* semantic UI components for linking to url paths */}
+                            <Menu size='massive'>
+                                <Menu.Item
+                                    name='home' active={activeTab === 'home'}
+                                    onClick={AppRouterStore.handleTabClick}
+                                    as={Link} to='/'
+                                />
 
-                            <Menu.Item
-                                name='product' active={activeTab === 'product'}
-                                onClick={AppRouterStore.handleTabClick}
-                                as={Link} to='/product'
-                            />
+                                <Menu.Item
+                                    name='product' active={activeTab === 'product'}
+                                    onClick={AppRouterStore.handleTabClick}
+                                    as={Link} to='/product'
+                                />
 
-                            <Menu.Item
-                                name='announcements' active={activeTab === 'announcements'}
-                                onClick={AppRouterStore.handleTabClick}
-                                as={Link} to='/announcements'
-                            />
+                                <Menu.Item
+                                    name='announcements' active={activeTab === 'announcements'}
+                                    onClick={AppRouterStore.handleTabClick}
+                                    as={Link} to='/announcements'
+                                />
 
-                            {/* 
+                                {/* 
                                     <MainMenu />
                                     <SecondaryMenu />
                                 */}
 
-                        </Menu>
+                            </Menu>
+                        </Sticky>
 
                         {/* Switch Component that holds Routes */}
                         <br />

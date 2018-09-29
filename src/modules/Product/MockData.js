@@ -58,8 +58,16 @@ const MockData = {
                 'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=350',
                 'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=350',
             ]
-        }
-    ]
+        }, {
+            id: 6,
+            name: 'Bunny',
+            price: 125,
+            description: 'fluffiest bunny ever',
+            img: [
+                'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=350',
+                'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=350',
+            ]
+        }    ]
 }
 
 module.exports = MockData;

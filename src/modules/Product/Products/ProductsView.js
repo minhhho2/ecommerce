@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { Card, Image, Button } from 'semantic-ui-react'
+import { Card, Image, Button, Container } from 'semantic-ui-react'
 
 import ProductsStore from './ProductsStore';
 
@@ -20,7 +20,7 @@ export default class ProductsView extends React.Component {
         return (
 
             <div className='p-5'>
-                <Card.Group className='pl-5' itemsPerRow={5}>
+                <Card.Group itemsPerRow={4}>
                     {ProductsStore.products.map(product => {
                         return (
                             <Card className='text-center' key={product.id}>
@@ -39,11 +39,9 @@ export default class ProductsView extends React.Component {
                                         onClick={this.onRedirectProduct}
                                     />
                                 </Card.Content>
-
                             </Card>
                         )
                     })}
-
                 </Card.Group>
 
             </div>
