@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import { Card, Image, Button, Container } from 'semantic-ui-react'
+import { Card, Image, Button } from 'semantic-ui-react'
 
 import ProductsStore from './ProductsStore';
 
@@ -12,8 +12,7 @@ export default class ProductsView extends React.Component {
     }
 
     onRedirectProduct = (e) => {
-        console.log(e.target.id);
-        this.props.history.push('/product/' + e.target.id);
+        this.props.history.push('/products/' + e.target.id);
     }
 
     render() {

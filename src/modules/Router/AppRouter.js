@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
-import { Menu, Icon, Sticky } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 // import custom components
 import HomeView from '../Views/HomeView';
@@ -20,8 +20,6 @@ export default class AppRouter extends React.Component {
 
     /* Set up initial states */
     componentDidMount() { AppRouterStore.setup(); }
-
-    handleContextRef = contextRef => AppRouterStore.contextRef = contextRef;
     
     render() {
 
@@ -33,8 +31,7 @@ export default class AppRouter extends React.Component {
                 {/* Router for containing UI links and Url Routes */}
                 <BrowserRouter>
 
-                    <div ref={this.handleContextRef}>
-                        <Sticky context={contextRef} pushing>
+                    <div>
 
                             {/* semantic UI components for linking to url paths */}
                             <Menu size='massive'>
@@ -45,9 +42,9 @@ export default class AppRouter extends React.Component {
                                 />
 
                                 <Menu.Item
-                                    name='product' active={activeTab === 'product'}
+                                    name='products' active={activeTab === 'products'}
                                     onClick={AppRouterStore.handleTabClick}
-                                    as={Link} to='/product'
+                                    as={Link} to='/products'
                                 />
 
                                 <Menu.Item
@@ -62,14 +59,13 @@ export default class AppRouter extends React.Component {
                                 */}
 
                             </Menu>
-                        </Sticky>
 
                         {/* Switch Component that holds Routes */}
                         <br />
                         <Switch>
                             <Route exact path='/' component={HomeView} />
-                            <Route exact path='/product' component={ProductsView} />
-                            <Route exact path="/product/:id" component={ProductView} />
+                            <Route exact path='/products' component={ProductsView} />
+                            <Route exact path="/products/:id" component={ProductView} />
                             <Route exact path='/announcements' component={AnnouncementsView} />
 
 
