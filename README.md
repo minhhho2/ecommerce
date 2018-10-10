@@ -19,4 +19,6 @@ $ npm install
     - Page for viewing the latest news
 - Poll/Thread (TODO)
     - Page for voting on the next product the website will offer
-![Landing Page](https://github.com/minhhho2/Barricade/blob/master/assets/landing.png)
+
+## Figures
+![Landing Page](https://github.com/minhhho2/ecommerce/blob/master/assets/products.png)
