@@ -1,4 +1,4 @@
-## Share With Me
+## Middle Man
 Website for me to display products that I have purchased in bulk to offer to family and friends at a lower than retail price.
 
 ## Getting Started
@@ -15,7 +15,8 @@ $ npm install
 ## Features
 - Products 
     - Page for viewing available products
-- News
+- Announcements
     - Page for viewing the latest news
 - Poll/Thread (TODO)
     - Page for voting on the next product the website will offer
+![Landing Page](https://github.com/minhhho2/Barricade/blob/master/assets/landing.png)
